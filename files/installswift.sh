@@ -4,7 +4,7 @@
 
 sudo apt-get install -y supervisor
 sudo mkdir -p /var/log/supervisor
-sudo files/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+sudo cp files/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 #
 # Swift configuration
