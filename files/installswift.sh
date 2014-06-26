@@ -15,9 +15,7 @@ sudo files/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 sudo apt-get update && apt-get install -y swift python-swiftclient rsync
 
 # proxy
-sudo apt-get install -y swift-proxy swift-object memcached python-keystoneclient \
-			           python-swiftclient swift-plugin-s3 python-netifaces \ 
-			           python-xattr python-memcache
+sudo apt-get install -y swift-proxy swift-object memcached python-keystoneclient python-swiftclient swift-plugin-s3 python-netifaces python-xattr python-memcache
 
 # storage
 sudo apt-get install -y swift-account swift-container swift-object 

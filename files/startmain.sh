@@ -8,7 +8,6 @@
 SWIFT_PART_POWER=${SWIFT_PART_POWER:-7}
 SWIFT_PART_HOURS=${SWIFT_PART_HOURS:-1}
 SWIFT_REPLICAS=${SWIFT_REPLICAS:-1}
-replication= #INSERT IP HERE
 
 if [ -e /srv/account.builder ]; then
 	echo "Ring files already exist in /srv, copying them to /etc/swift..."
@@ -30,13 +29,13 @@ if [ ! -e /etc/swift/account.builder ]; then
 	echo "No existing ring files, creating them..."
 
 	swift-ring-builder object.builder create ${SWIFT_PART_POWER} 1 ${SWIFT_PART_HOURS}
-	swift-ring-builder object.builder add r1z1-127.0.0.1:6010R${replication}/sdb1 1
+	swift-ring-builder object.builder add r1z1-127.0.0.1:6010/sdb1 1
 	swift-ring-builder object.builder rebalance
 	swift-ring-builder container.builder create ${SWIFT_PART_POWER} 1 ${SWIFT_PART_HOURS}
-	swift-ring-builder container.builder add r1z1-127.0.0.1:6011R${replication}/sdb1 1
+	swift-ring-builder container.builder add r1z1-127.0.0.1:6011/sdb1 1
 	swift-ring-builder container.builder rebalance
 	swift-ring-builder account.builder create ${SWIFT_PART_POWER} 1 ${SWIFT_PART_HOURS}
-	swift-ring-builder account.builder add r1z1-127.0.0.1:6012R${replication}/sdb1 1
+	swift-ring-builder account.builder add r1z1-127.0.0.1:6012/sdb1 1
 	swift-ring-builder account.builder rebalance
 
 	# Back these up for later use
