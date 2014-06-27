@@ -14,7 +14,7 @@ And when git is installed, you need to clone the repository :
 
 
 ```bash
-git clone https://github.com/fclement21/swift-main.git
+git clone https://github.com/fclement21/swift-replication.git
 ```
 
 ## Usage
