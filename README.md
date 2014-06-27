@@ -54,6 +54,8 @@ swift.txt
 
 OR 
 
+```bash
 curl -X PUT -i -H "X-Auth-Token: TOKEN" -T Desktop/test.txt  http://url:8080/v1/AUTH_swift/name-container/test.txt
+```
 
 That's it!
