@@ -1,7 +1,7 @@
 # !/bin/bash
 # supervisor
 #
-
+cd swift-replication/
 sudo apt-get install -y supervisor
 sudo mkdir -p /var/log/supervisor
 sudo cp files/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
