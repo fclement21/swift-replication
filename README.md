@@ -1,4 +1,4 @@
-#Install Swift-Main with replication
+#Install Swift-Replication server
 In this github, you can see how to setup a Server with swift and replication in other server.
 
 
